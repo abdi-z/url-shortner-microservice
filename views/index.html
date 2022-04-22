@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>URL Shortener Microservice | Abdul Rehman Aziz</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+    <script>
+      function myFunction() {
+        /* Get the text field */
+        var copyText = document.getElementById("myInput");
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        navigator.clipboard.writeText(copyText.value);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="wchd">URL Shortener Microservice</h1>
+      <main>
+        <section>
+          ! Be sure to provide a valid complete link e.g.
+          https://www.example.com/
+          <form action="api/shorturl" method="POST">
+            <fieldset>
+              <legend>URL Shortener</legend>
+              <label for="url_input">URL:</label>
+              <input
+                id="url_input"
+                type="text"
+                name="url"
+                placeholder="https://www.google.com/"
+              />
+              <input type="submit" value="POST URL" />
+            </fieldset>
+            After adding your link and pressing POST, you will be given your
+            url.
+          </form>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>
+        By
+        <a href="https://github.com/mishaosipovprodigy2">Abdul Rehman Aziz</a>
+      </p>
+    </footer>
+  </body>
+</html>
